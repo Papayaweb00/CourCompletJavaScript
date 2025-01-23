@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation formulaires html</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Validation formulaires html</h1>
+
+    <form action="post" action="traitement.php">
+        <div>
+            <label for="prenom">Entrez votre prenom</label>
+            <input type="text" name="prenom" id="prenom" required maxlength="20">
+            <span id="prenom_manquant"></span>
+        </div>
+        <div>
+            <label for="mail">Entrez votre email</label>
+            <input type="email" name="mail" id="mail" required>
+        </div>
+        <div>
+            <label for="tel">Numero telephone</label>
+            <input type="tel" name="tel" id="tel" required>
+        </div>
+
+        <input type="submit" value="Valider" id="boutton_envoie">
+    </form>
+
+    <script>
+        const validation = document.getElementById('boutton_envoie');
+        const prenom = document.getElementById('prenom');
+        const prenom_manquant = document.getElementById('prenom_manquant');
+        const prenom_v = /^[a-zA-Zéè][a-zA-Zéè]+([-\s][a-zA-Zéè][a-zA-Zéè])?/
+
+        validation.addEventListener('click', f_valid);
+        function f_valid(e) {
+            if(prenom.validity.valueMissing) {
+                e.preventDefault();
+                prenom_manquant.textContent = 'Prenom manquant';
+                prenom_manquant.style.color = 'red';
+            } else if (prenom_v.test(prenom.value) == false) {
+                e.preventDefault();
+                prenom_manquant.textContent = 'Le format ecrit n\'est pas valide';
+                prenom_manquant.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+
+</html>

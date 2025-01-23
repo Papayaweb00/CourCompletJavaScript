@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objet Location</title>
+</head>
+<body>
+    <h1>Objet Location</h1>
+    <button id="charger">Charger un nouveau document</button>
+    <button id="recharger">Recharger le document</button>
+    <button id="remplacer">Remplacer le document</button>
+
+    <p></p>
+    <script>
+        var para = document.querySelector('p');
+        var charger = document.getElementById('charger');
+        var recharger = document.getElementById('recharger');
+        var remplacer = document.getElementById('remplacer');
+
+        charger.addEventListener('click', charge);
+        recharger.addEventListener('click', recharge);
+        remplacer.addEventListener('click', remplace);
+
+        function charge() {
+            location.assign('https://pierre-giraud.com');
+        }
+        function recharge() {
+            location.reload();
+        }
+        function remplace() {
+            location.replace('https://business-website00.netlify.app/');
+        }
+
+        var url = location.href;
+        var chemin = location.pathname;
+
+        para.innerHTML = 'url : ' + url + '<br>chemin : ' + chemin;
+    </script>
+</body>
+</html>

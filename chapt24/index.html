@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methode de l'objet array</title>
+</head>
+
+<body>
+    <h1>Methode de l'objet array</h1>
+
+    <script>
+        // var prenom = ['Pierre', 'Victor', 'Julia', 'Claire'];
+        var garcon = ['Pierre', 'Victor', 'Jule'];
+        var fille = ['Julia', 'Claire'];
+        var animaux = ['Lion', 'Tigre'];
+
+        var concatTab = garcon.concat(fille);
+        var concatTabf = fille.concat(garcon);
+        var fusion = garcon.concat(fille, animaux);
+
+        // var chaine = prenom.join('/');
+        // var garcon = prenom.slice(0, 2);
+
+        // var taille = prenom.push('Chloe', 'Tom'), p = '';
+        // var taille = prenom.unshift('Chloe', 'Tom'), p = '';
+        // var taille = prenom.splice(0, 1, 'Chloe', 'Tom'), p = '';
+        // var taille = prenom.splice(0, 3), p = '';
+        // var taille = prenom.pop(), p = '';
+        // var taille = prenom.shift(), p = '';
+        // var taille = prenom.sort(), p = '';
+        // prenom.sort(), p = '';
+        // prenom.reverse();
+
+        // for (i = 0; i < prenom.length; i++) {
+        //     p += 'Prenom num ' + (i + 1) + ': ' + prenom[i] + '\n';
+        // }
+
+        // alert('Le tableau contient ' + taille + 'elements \n\n' + p);
+        // alert('Nouveau tableau \n\n' + chaine);
+        // alert('Nouveau tableau \n\n' + garcon);
+        alert(
+            'Garcon : ' + garcon +
+            "\nFille : " + fille +
+            '\nconcatTab : ' + concatTab +
+            '\nconcatTabf : ' + concatTabf + 
+            '\nFusion : ' + fusion 
+        );
+    </script>
+</body>
+
+</html>

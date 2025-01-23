@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objet history</title>
+</head>
+
+<body>
+    <h1 id="gros_titre">Objet history</h1>
+    <button id="preced">Page precedente</button>
+    <button id="suiv">Page suivante</button>
+    <button id="specif">3 pages arrieres</button>
+
+    <p></p>
+
+
+    <script>
+        var para = document.querySelector('p');
+        var precedent = document.getElementById('preced');
+        var suivant = document.getElementById('suiv');
+        var specifique = document.getElementById('specif');
+
+        precedent.addEventListener('click', fprecedent);
+        suivant.addEventListener('click', fsuivant);
+        specifique.addEventListener('click', fspecifique);
+
+        function fprecedent() {
+            history.back();
+        }
+        function fsuivant() {
+            history.forward();
+        }
+        function fspecifique() {
+            history.go(-3);
+        }
+
+        var histo = history.length;
+
+        para.innerHTML = 'url : ' + histo;
+
+    </script>
+</body>
+
+</html>

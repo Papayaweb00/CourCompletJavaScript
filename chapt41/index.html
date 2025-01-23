@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'objet Event</title>
+    <style>
+        #div1 {
+            background-color: #56C;
+            padding: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>L'objet Event</h1>
+    <div id="div1">
+        <p id="p1">Qui est le declencheur ? Le porteur d' evenements</p>
+    </div>
+
+    <script>
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+
+        div1.addEventListener('click', mes);
+        function mes (event) {
+            // this.innerHTML = 'Element declencheur : ' + event.target + '<br>Element portant l\'evenement : ' + event.currentTarget;
+            this.innerHTML = 'Type d\'evenement declenche : ' + event.type;
+        }
+    </script>
+</body>
+</html>

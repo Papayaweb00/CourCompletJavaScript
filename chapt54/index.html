@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element CANVAS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas1 {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dessiner des Rectangle</h1>
+
+    <canvas id="canvas1" width="500" height="300"></canvas>
+
+    <script>
+        var canvas = document.getElementById('canvas1');
+        
+        var context = canvas.getContext('2d');
+
+        // rectangle 1 : bleu, plein, opaque
+        context.fillStyle = '#35B';
+        context.fillRect(100, 50, 200, 100);
+
+        // rectangle 2 : vert, plein, semi-transparent
+        context.fillStyle = 'RGBa(50, 200, 100, 0.5)';
+        context.fillRect(50, 25, 100, 50);
+
+        // rectangle 2 : vert, plein, semi-transparent
+        context.lineWidth = '5';
+        context.strokeStyle = '#A3A';
+        context.strokeRect(250, 125, 100, 50);
+    </script>
+</body>
+</html>

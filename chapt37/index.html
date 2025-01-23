@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naviguer dans le DOM</title>
+</head>
+<body>
+    <h1 id="gros_titre">Naviguer dans le DOM</h1>
+    <div>
+        <p class="para">Du texte</p>
+        <p class="para">Deuxieme <strong>texte</strong></p>
+    </div>
+
+
+    <script>
+        // var p = document.querySelector('.para');
+        // var div = p.parentNode;
+
+        // div.style.backgroundColor = 'aqua';
+
+        // var b = document.body;
+        // var div = b.childNodes[3];
+        // var p1 = div.childNodes[1]
+
+        // div.style.backgroundColor = 'aqua';
+        // var text = p1.childNodes[0].nodeValue;
+
+        // alert(text);
+
+        // var p2 = document.querySelectorAll('.para')[1];
+        // var pr = p2.firstChild;
+        // var dr = p2.lastChild;
+
+        // var inner1 = pr.nodeValue;
+        // var inner2 = dr.textContent;
+
+        // alert(
+        //     'Contenue du premier enfant : ' + inner1 +
+        //     '\nContenue du dernier enfant : ' + inner2
+        // )
+
+        var titre = document.getElementById('gros_titre');
+
+        var div = titre.nextSibling.nextSibling;
+
+        div.innerHTML = 'Div modifier en js';
+    </script>
+</body>
+</html>

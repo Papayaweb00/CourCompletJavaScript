@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objet String</title>
+</head>
+
+<body>
+    <h1>Objet String</h1>
+
+
+    <script>
+        var text = 'Je suis un texte';
+
+        var l = text.toLowerCase();
+        var u = text.toUpperCase();
+
+        alert
+            (
+                'Texte : ' + text +
+                '\nTexte minus : ' + l +
+                '\nTexte maj : ' + u
+            );
+
+        // toUpperCase() et toLowerCase(): Convertit la chaîne de caractères en majuscules ou minuscules.
+        console.log('toUpperCase : ' + text.toUpperCase());
+        console.log('toLowerCase : ' + text.toLowerCase());
+
+        // indexOf() et lastIndexOf(): Retourne la position d'un caractère ou d'une sous-chaîne dans la chaîne principale.
+        console.log('indexOf : ' + text.indexOf("s"));
+        console.log('lastIndexOf : ' + text.lastIndexOf("s"));
+
+        // charAt(): Retourne le caractère à une position donnée.
+        console.log('charAt : ' + text.charAt(1));
+
+        // slice(): Extrait une section de la chaîne et retourne une nouvelle chaîne.
+        console.log('slice : ' + text.slice(1, 4));
+
+        // split(): Divise la chaîne en un tableau de sous-chaînes.
+        console.log('split : ' + text.split(" "));
+
+        // trim(): Supprime les espaces blancs aux deux extrémités de la chaîne.
+        console.log('trim : ' + text.trim());
+
+        // length: Retourne la longueur d'une chaîne de caractères.
+        console.log('length : ' + text.length);
+
+        // replace(): Remplace une partie de la chaîne par une nouvelle valeur.
+        console.log('replace : ' + text.replace('e suis', '\'ai'));
+        
+    </script>
+</body>
+
+</html>

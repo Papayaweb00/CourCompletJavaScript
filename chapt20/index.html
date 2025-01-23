@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creer Objet</title>
+</head>
+
+<body>
+    <h1>Creer Objet</h1>
+
+
+    <script>
+        // var moi = {
+        //     prenom: 'Pierre',
+        //     nom: 'Gireaud',
+        //     age: 25,
+
+        //     id: function () {
+        //         return 'Prenom : ' + this.prenom + ' ' + this.nom; 
+        //     }
+        // }
+
+        // alert(moi.id());
+
+        function identity(a, b, c) {
+            this.prenom = a;
+            this.nom = b;
+            this.age = c;
+        }
+
+        const p = new identity('Pierre', 'Giraud', '24');
+        // const v = new identity('Victor', 'Dubois', '25');
+        const v = p;
+        v.prenom = 'hfhfhf';
+
+        alert(
+            'Age p : ' + p.prenom +
+            '\nAge v : ' + v.prenom
+        );
+    </script>
+</body>
+
+</html>

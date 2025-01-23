@@ -1,0 +1,25 @@
+const p1 = document.querySelector('p');
+const p2 = document.querySelector('p strong');
+// console.log(p2);
+
+
+p1.addEventListener('click', message1);
+p1.addEventListener('click', message2);
+
+function message1() {
+    this.innerHTML = '<stong>Bravo !</stong>';
+    this.style.color = 'orange';
+    this.style.fontSize = '2em';
+}
+
+function message2() {
+    p2.innerHTML = '<stong>Bravo !</stong>';
+    p2.style.color = 'orange';
+    p2.style.fontSize = '2em';
+}
+
+// function changeText() {
+//     this.innerHTML = '<stong>Bravo !</stong>';
+//     this.style.color = 'orange';
+//     this.style.fontSize = '2em';
+// }

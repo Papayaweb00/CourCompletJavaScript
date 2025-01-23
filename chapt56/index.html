@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element CANVAS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas1 {
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dessiner des cercles</h1>
+
+    <canvas id="canvas1" width="500" height="300"></canvas>
+
+    <script>
+        var canvas = document.getElementById('canvas1');
+        
+        var context = canvas.getContext('2d');
+
+        context.beginPath();
+        context.lineWidth = '5';
+        context.fillStyle = '#A4F';
+        context.arc(75, 100, 50, 0, Math.PI);
+        context.fill();
+
+        context.beginPath();
+        context.lineWidth = '5';
+        context.fillStyle = '#A4a';
+        context.arc(200, 100, 50, 0, 2*Math.PI);
+        context.fill();
+
+        context.beginPath();
+        context.lineWidth = '5';
+        context.fillStyle = '#48c';
+        context.arc(325, 100, 50, Math.PI, 2*Math.PI);
+        context.fill();
+
+        // context.beginPath();
+        // context.lineWidth = '5';
+        // context.strokeStyle = '#A4F';
+        // context.arc(75, 100, 50, 0, Math.PI);
+        // context.stroke();
+
+        // context.beginPath();
+        // context.lineWidth = '5';
+        // context.strokeStyle = '#A4a';
+        // context.arc(200, 100, 50, 0, 2*Math.PI);
+        // context.stroke();
+
+        // context.beginPath();
+        // context.lineWidth = '5';
+        // context.strokeStyle = '#48c';
+        // context.arc(325, 100, 50, Math.PI, 2*Math.PI);
+        // context.stroke();
+    </script>
+</body>
+</html>

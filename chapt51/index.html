@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires en html</title>
+    <style>
+        label {
+            display: inline-block;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaires en html</h1>
+
+    <form action="post" action="traitement.php">
+        <label for="prenom">Entrez votre prenom</label>
+        <input type="text" name="prenom" id="prenom"><br>
+        <label for="mail">Entrez votre email</label>
+        <input type="email" name="mail" id="mail"><br>
+        <label for="tel">Numero telephone</label>
+        <input type="tel" name="tel" id="tel"><br>
+
+        <input type="submit" value="Valider">
+    </form>
+</body>
+</html>

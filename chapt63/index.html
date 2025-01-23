@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODE STRICT</title>
+</head>
+<body>
+    <h1>MODE STRICT</h1>
+    <p id="varX"></p>
+    <p id="varY"></p>
+
+    <script>
+        // 'use strict';
+        var afficheX = document.getElementById('varX');
+        var afficheY = document.getElementById('varY');
+
+        (function affX() {
+            'use strict';
+            var x = 5;
+            alert(x);
+        })()
+        function affy() {
+            // 'use strict';
+            y = 10;
+            alert(y);
+        }
+        affy()
+        // var x = 5;
+        // afficheX.innerHTML = x;
+        // var y = 10;
+        // y = 10;
+
+        // afficheX.innerHTML = x;
+        // afficheY.innerHTML = y;
+    </script>
+</body>
+</html>

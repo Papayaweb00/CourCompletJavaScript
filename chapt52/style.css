@@ -1,0 +1,50 @@
+label {
+    display: inline-block;
+    min-width: 200px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    background-color: #56A;
+    padding: 25px 0;
+    border-radius: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=tel] {
+    width: 73vw;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+form input[type=submit] {
+    background-color: #9AF;
+    color: white;
+    font-weight: bold;
+    padding: 9px 0;
+    width: 45%;
+    border: none;
+    border-radius: 15px;
+}
+
+form input[type=submit]:hover {
+    opacity: 0.7;
+}
+
+h1 {
+    text-align: center;
+}

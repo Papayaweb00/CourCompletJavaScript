@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion avances</title>
+</head>
+
+<body>
+    <h1>Gestion des erreurs</h1>
+    <label for="nb">Entrez un nombre entre 1 et 10</label>
+    <input type="number" min="1" max="10" id="nb" name="nb">
+    <button type="button" id="test">Valider</button>
+    <p id="msg"></p>
+
+    <script>
+        var test = document.getElementById('test');
+
+
+        test.addEventListener('click', testValeur);
+
+        function testValeur() {
+            var nb = document.getElementById('nb').value;
+            var msg = document.getElementById('msg');
+
+            try {
+                if ((isNaN(nb)) || (nb.trim() == '')) {
+                    throw 'Vous n\'avez pas rentré de nombre valide';
+                } else if ((nb < 1) || (nb > 10)) {
+                    throw 'Le nombre entré n\'est pas dans l\'interval demandé';
+                } else {
+                    msg.innerHTML = 'Nombre ok';
+                }
+            } catch (e) {
+                msg.innerHTML = e;
+            }
+
+            finally {
+                document.getElementById('nb').value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element CANVAS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas1 {
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Creer des DEGRADES</h1>
+    <canvas id="canvas1" width="400" height="200"></canvas>
+
+    <script>
+        var canvas = document.getElementById('canvas1');
+        var context = canvas.getContext('2d');
+
+        var Radial = context.createRadialGradient(200, 100, 20, 200, 100, 75);
+
+        Radial.addColorStop(0, '#4c8');
+        Radial.addColorStop(0.5, '#48c');
+        Radial.addColorStop(1, '#a4a');
+
+        context.fillStyle = Radial;
+        context.arc(200, 100, 75, 0, 2 * Math.PI);
+        context.fill();
+
+        // var lineaire = context.createLinearGradient(100, 50, 300, 150);
+
+        // lineaire.addColorStop(0, '#4c8');
+        // lineaire.addColorStop(0.5, '#48c');
+        // lineaire.addColorStop(1, '#a4a');
+
+        // context.fillStyle = lineaire;
+        // context.fillRect(100, 50, 200, 100);
+    </script>
+</body>
+
+</html>

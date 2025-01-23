@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantifieurs et Options</title>
+</head>
+
+<body>
+    <h1>Quantifieurs et Options</h1>
+    <p>1, 10, 100, 1000</p>
+    <p id="reg"></p>
+    <script>
+        var exp = document.querySelector('p').textContent;
+        var reg = document.querySelector('#reg');
+
+        var r1 = /10+/g;
+
+        var res1 = exp.match(r1);
+
+        reg.innerHTML = "Resultat sur regexp 1 : " + res1;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Delai d'execution</title>
+</head>
+
+<body>
+    <h1>Gestion de Delai d'execution</h1>
+    <p>Horloge actualisée en direct ! Il est <span id="temps"></span></p>
+    <button id="stop">Arreter le temps</button>
+    <button id="btn">Cliquez</button>
+
+    <script>
+        var heure = document.getElementById('temps');
+        btn, addEventListener('click', couleur);
+
+        function couleur() {
+            setTimeout(function (){ document.body.style.backgroundColor = '#84a' },1000);
+            setTimeout(function (){ document.body.style.backgroundColor = '#f12' },2000);
+            setTimeout(function (){ document.body.style.backgroundColor = '#a24' },3000);
+            setTimeout(function (){ document.body.style.backgroundColor = '#2ff' },4000);
+            setTimeout(function (){ document.body.style.backgroundColor = '#aa2' },5000);
+            setTimeout(function (){ document.body.style.backgroundColor = '#12f' },6000);
+            setTimeout(function (){ document.body.style.backgroundColor = '#a4a' },7000);
+        }
+
+        var heure = document.getElementById('temps');
+        var stop = document.getElementById('stop');
+        var tempsReel = setInterval(horloge, 1000);
+
+        function horloge () {
+            var d = new Date();
+            heure.innerHTML = d.toLocaleTimeString();
+        }
+
+        stop.addEventListener('click', arret);
+        function arret () {
+            clearInterval(tempsReel);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche et remplacement</title>
+</head>
+
+<body>
+    <h1>Recherche et remplacement</h1>
+    <p>Engagez vous qu'ils disaient, rengagez vous qu'ils disaient</p>
+    <p id="reg"></p>
+    <script>
+        var exp = document.querySelector('p').textContent;
+        var reg = document.querySelector('#reg');
+
+        var r1 = /aient/;
+        // var r1 = /ENGAGEZ/i;
+        // var r2 = /ENGAGEZ/;
+        // var r1 = /vous/i;
+        // var r2 = /vous/;
+        // var r1 = /engagez/i;
+        // var r2 = /engagez/;
+        // var r2 = /engagez/gi;
+
+        var res1 = r1.exec(exp);
+        // var res1 = r1.test(exp);
+        // var res1 = exp.textContent.replace(r1, 'moi');
+        // var res1 = exp.textContent.search(r1);
+        // var res2 = r2.test(exp);
+        // var res2 = exp.textContent.replace(r2, 'moi');
+        // var res2 = exp.textContent.search(r2);
+        // var res1 = exp.textContent.match(r1);
+        // var res2 = exp.textContent.match(r2);
+
+        reg.innerHTML = "Resultat sur regexp 1 : " + res1
+        // reg.innerHTML = "Resultat match() sur regexp 1 : " + res1 +
+        //     "<br>Resultat match() sur regexp 2 : " + res2;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objet array</title>
+</head>
+
+<body>
+    <h1>Objet array</h1>
+
+    <script>
+        // var prenom = ['Pierre', 'Victor', 'Julia', 'Claire'];
+
+        // prenom[0] = 'Paul';
+        // prenom[prenom.length] = 'Chloe';
+        // prenom[prenom.length] = 'Tom';
+        // alert(prenom[0]);
+
+        // alert('Le tableau comporte ' + prenom.length + ' element');
+        // alert('Nous avons ajoute ' + prenom[4] + ' et ' + prenom[5]);
+
+        var prenom = {
+            prenom1: 'Pierre',
+            prenom2: 'Victor',
+            prenom3: 'Julia',
+            prenom4: 'Claire'
+        }, p = '';
+
+        for (var clef in prenom) {
+            p += clef + ':' + prenom[clef] + '\n';
+        }
+
+        // alert(prenom.prenom1);
+        alert(p)
+    </script>
+</body>
+
+</html>

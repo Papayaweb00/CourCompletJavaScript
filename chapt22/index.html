@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objet Number</title>
+</head>
+
+<body>
+    <h1>Objet Number</h1>
+
+    <script>
+        var nbr = 199.123
+        // toFixed() : Formate un nombre en notation fixe.
+        console.log('toFixed : ' + nbr.toFixed(1))
+
+        // toPrecision() : Formate un nombre en notation avec une précision spécifiée.
+        console.log('toPrecision : ' + nbr.toPrecision(4));
+
+        // toString() : Convertit un nombre en une chaîne de caractères.
+        console.log('toString : ' + nbr.toString());
+
+        // valueOf() : Retourne la valeur primitive de l'objet Number.
+        console.log('valueOf : ' + nbr.valueOf());
+
+        // parseInt() : Analyse une chaîne de caractères et retourne un entier.
+        console.log('parseInt : ' + parseInt(nbr));
+        
+        // parseFloat() : Analyse une chaîne de caractères et retourne un nombre à virgule flottante.
+        console.log('parseFloat : ' + parseFloat(nbr));
+        
+        // isNaN() : Détermine si une valeur est NaN (Not-a-Number).
+        console.log(isNaN(nbr));
+
+        // isFinite() : Détermine si une valeur est un nombre fini.
+        console.log(isFinite(nbr));
+        
+        
+    </script>
+</body>
+
+</html>
